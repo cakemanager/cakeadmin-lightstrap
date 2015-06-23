@@ -22,7 +22,7 @@ use Cake\Core\Configure;
 	<fieldset>
 		<legend><?= __('Login') ?></legend>
 		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'E-mail', 'label' => false]) ?>
-		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '','placeholder' => 'E-mail', 'label' => false]) ?>
+		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '','placeholder' => 'Password', 'label' => false]) ?>
 	</fieldset>
 	<?= $this->Form->button(__('Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
 	<?= $this->Html->link('Forgot password?', ['action' => 'forgot'],['class' => 'btn btn-block btn-link']); ?>
