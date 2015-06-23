@@ -55,19 +55,15 @@ $this->assign('title', $title);
 			</nav>
 		</header>
 		<div id="container" class="container">
-
 			<div id="content">
-
 				<div class="row">
 					<div class="col-lg-2 col-md-2">
 						<ul class="nav nav-pills nav-stacked">
 							<?= $this->Menu->menu('main', 'CakeAdmin.MainMenu') ?>
 						</ul>
 					</div>
-
 					<div class="col-lg-10 col-md-10">
 						<?= $this->Flash->render() ?>
-
 						<?= $this->fetch('content') ?>
 					</div>
 				</div>
