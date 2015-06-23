@@ -1,0 +1,19 @@
+{
+  "name": "cakeadmin-lightstrap",
+  "version": "0.9.0",
+  "authors": [
+    "Leonardo Ruhland <leoruhland@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.3.0"
+  }
+}
