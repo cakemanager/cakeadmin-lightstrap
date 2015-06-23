@@ -19,13 +19,12 @@ $ npm install -g bower
 ## Installation
 
 Use the following code in your `config/bootstrap.php` 
-
 ```php
 Plugin::load('LightStrap', ['bootstrap' => true, 'routes' => false]);
 ```
 
-Use the following code in your `src/View/AppView.php` 
 
+Use the following code in your `src/View/AppView.php` 
 ```php
 public function initialize()
 {
@@ -36,12 +35,13 @@ public function initialize()
 }
 ```
 
-For download the bower requirements
 
+For download the bower requirements
 ```
 $ cd plugins/LigthStrap
 $ bower install
 ```
+
 
 ## Usage
 
@@ -49,6 +49,7 @@ $ bower install
 ```php
 Configure::write('CA.theme', 'LightStrap');
 ```
+
 
 ## CakeAdmin
 
