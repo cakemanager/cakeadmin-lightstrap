@@ -15,26 +15,9 @@ Now load the plugin with the command:
 
     $ bin/cake plugin load -r -b LightStrap
 
-Use the following code in your `src/View/AppView.php` 
-
-```php
-public function initialize()
-{
-	$this->loadHelper('Html', ['className' => 'Bootstrap3.BootstrapHtml']);
-	$this->loadHelper('Form', ['className' => 'Bootstrap3.BootstrapForm']);
-	$this->loadHelper('Paginator', ['className' => 'Bootstrap3.BootstrapPaginator']);
-	$this->loadHelper('Modal', ['className' => 'Bootstrap3.BootstrapModal']);
-}
-```
-
 ## Usage
 
-[Configure CakeAdmin](http://cakemanager.org/docs/cakeadmin/1.0/general/configurations/#theming) to select the 
-LightStrap Theme as used theme for the admin panel.
-
-```php
-    Configure::write('CA.theme', 'LightStrap');
-```
+No need to do stuff. Everything is automatically set by loading the plugin.
 
 ## CakeAdmin
 

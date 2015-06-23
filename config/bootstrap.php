@@ -16,3 +16,6 @@ use Cake\Core\Configure;
 use Cake\Core\Plugin;
 
 Plugin::load('Bootstrap3');
+
+Configure::write('CA.viewClass', 'LightStrap.App');
+Configure::write('CA.theme', 'LightStrap');
