@@ -22,7 +22,6 @@ Use the following code in your `config/bootstrap.php`
 
 ```php
 Plugin::load('LightStrap', ['bootstrap' => true, 'routes' => false]);
-Configure::write('CA.theme', 'LightStrap');
 ```
 
 Use the following code in your `src/View/AppView.php` 
@@ -50,6 +49,7 @@ $ bower install
 ```php
 Configure::write('CA.theme', 'LightStrap');
 ```
+
 ## CakeAdmin
 
 The plugin is [CakeAdmin](https://github.com/cakemanager/cakephp-cakeadmin) compatible!
