@@ -2,14 +2,6 @@
 
 > Note: This is a non-stable plugin for CakePHP 3.x at this time. It is currently under development and should be considered experimental.
 
-## Requisites
-
-[Bower](http://bower.io/)
-```sh 
-$ npm install -g bower
-```
-
-
 ## Installation
 
 Install [CakePHP 3.x Helpers for Bootstrap 3](https://github.com/Holt59/cakephp3-bootstrap3-helpers)
@@ -34,14 +26,6 @@ public function initialize()
 	$this->loadHelper('Modal', ['className' => 'Bootstrap3.BootstrapModal']);
 }
 ```
-
-
-For download the bower requirements
-```
-$ cd plugins/LightStrap
-$ bower install
-```
-
 
 ## Usage
 
