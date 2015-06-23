@@ -21,8 +21,8 @@ use Cake\Core\Configure;
 	<?= $this->Form->create(null, ['class'=>'form-signin']) ?>
 	<fieldset>
 		<legend><?= __('Login') ?></legend>
-		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'Username']) ?>
-		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '']) ?>
+		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'E-mail', 'label' => false]) ?>
+		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '','placeholder' => 'E-mail', 'label' => false]) ?>
 	</fieldset>
 	<?= $this->Form->button(__('Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
 	<?= $this->Html->link('Forgot password?', ['action' => 'forgot'],['class' => 'btn btn-block btn-link']); ?>
