@@ -21,12 +21,11 @@ use Cake\Core\Configure;
 	<?= $this->Form->create(null, ['class'=>'form-signin']) ?>
 	<fieldset>
 		<legend><?= __('Login') ?></legend>
-		<hr /><br>
 		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'Username']) ?>
 		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '']) ?>
 	</fieldset>
 	<?= $this->Form->button(__('Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
-	<?= $this->Html->link('Forgot password', ['action' => 'forgot'],['class' => 'btn btn-lg btn-link']); ?>
+	<?= $this->Html->link('Forgot password?', ['action' => 'forgot'],['class' => 'btn btn-block btn-link']); ?>
 
 	<?= $this->Form->end() ?>
 </div>
