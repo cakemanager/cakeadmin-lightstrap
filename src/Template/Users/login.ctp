@@ -16,15 +16,18 @@
 use Cake\Core\Configure;
 
 ?>
-<div class="users form">
-    <?= $this->Flash->render('auth') ?>
-    <?= $this->Form->create() ?>
-    <fieldset>
-        <legend><?= __('Login') ?></legend>
-        <?= $this->Form->input(Configure::read('CA.fields.username')) ?>
-        <?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '']) ?>
-    </fieldset>
-    <?= $this->Form->button(__('Login')); ?>
-    <?= $this->Form->end() ?>
-    <?= $this->Html->link('Forgot password', ['action' => 'forgot']); ?>
+
+<div class="wrapper">
+	<?= $this->Flash->render('auth') ?>
+	<?= $this->Form->create(null, ['class'=>'form-signin']) ?>
+	<fieldset>
+		<legend><?= __('Login') ?></legend>
+		<h3 class="form-signin-heading">Login</h3>
+		<hr /><br>
+		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'Username']) ?>
+		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '']) ?>
+	</fieldset>
+	<?= $this->Form->button(__('Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
+	<?= $this->Form->end() ?>
+	<?= $this->Html->link('Forgot password', ['action' => 'forgot'],['class' => 'btn btn-link']); ?>
 </div>

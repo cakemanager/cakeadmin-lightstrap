@@ -17,45 +17,55 @@ $this->assign('title', $title);
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
-
-    <?= $this->Html->css('CakeAdmin.base') ?>
-    <?= $this->Html->css('CakeAdmin.cake') ?>
-    <?= $this->Html->css('CakeAdmin.custom') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-</head>
-<body>
-<header>
-    <div class="header-title">
-        <span><?= $this->fetch('title') ?></span>
-    </div>
-    <div class="header-help">
-        <span><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></span>
-        <span><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
-    </div>
-</header>
-<div id="container">
-
-    <div id="content">
-        <?= $this->Flash->render() ?>
-
-        <div class="row">
-            <div class="index large-12 medium-12 columns">
-                <?= $this->fetch('content') ?>
-            </div>
-        </div>
-    </div>
-    <footer>
-    </footer>
-</div>
-</body>
+	<head>
+		<?= $this->Html->charset() ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			<?= $this->fetch('title') ?>
+		</title>
+		<?= $this->Html->meta('icon') ?>
+		<?= $this->Html->css('LightStrap.bootstrap.min.css') ?>
+		<?= $this->Html->css('LightStrap.font-awesome.min.css') ?>
+		<?= $this->Html->css('LightStrap.main') ?>
+		<?= $this->Html->script('LightStrap.jquery.min.js') ?>
+		<?= $this->Html->script('LightStrap.bootstrap.min.js') ?>
+		<?= $this->Html->script('LightStrap.main.js') ?>
+		<?= $this->fetch('meta') ?>
+		<?= $this->fetch('css') ?>
+		<?= $this->fetch('script') ?>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">CakeAdmin LightStrap</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<?= $this->Menu->menu('headerLeft', 'CakeAdmin.MainMenu') ?>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div id="container" class="container">
+			<div id="content">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<?= $this->Flash->render() ?>
+						<?= $this->fetch('content') ?>
+					</div>
+				</div>
+			</div>
+			<footer>
+			</footer>
+		</div>
+	</body>
 </html>
