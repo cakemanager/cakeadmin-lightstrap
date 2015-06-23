@@ -1,22 +1,22 @@
 # LightStrap Theme for CakeAdmin
 
-> Note: This is a non-stable plugin for CakePHP 3.x at this time. It is currently under development and should be considered experimental.
+> Note: This is a non-stable plugin for CakePHP 3.x at this time. It is currently under development and should be 
+considered experimental.
 
 ## Installation
 
-Install [CakePHP 3.x Helpers for Bootstrap 3](https://github.com/Holt59/cakephp3-bootstrap3-helpers)
-```sh
-composer require holt59/cakephp3-bootstrap3-helpers:dev-master
-```
+You can install this plugin into your CakePHP application using composer.
 
+The recommended way to install composer packages is:
 
-Use the following code in your `config/bootstrap.php` 
-```php
-Plugin::load('LightStrap', ['bootstrap' => true, 'routes' => false]);
-```
+    composer require cakemanager/cakeadmin-lightstrap:dev-master
+    
+Now load the plugin with the command:
 
+    $ bin/cake plugin load -r -b LightStrap
 
 Use the following code in your `src/View/AppView.php` 
+
 ```php
 public function initialize()
 {
@@ -29,12 +29,17 @@ public function initialize()
 
 ## Usage
 
-[Configure CakeAdmin](https://github.com/cakemanager/cakeadmin-docs/blob/1.0/docs/general/configurations.md) to select LightStrap Theme.
-```php
-Configure::write('CA.theme', 'LightStrap');
-```
+[Configure CakeAdmin](http://cakemanager.org/docs/cakeadmin/1.0/general/configurations/#theming) to select the 
+LightStrap Theme as used theme for the admin panel.
 
+```php
+    Configure::write('CA.theme', 'LightStrap');
+```
 
 ## CakeAdmin
 
 The plugin is [CakeAdmin](https://github.com/cakemanager/cakephp-cakeadmin) compatible!
+
+## Get in touch
+
+Get in touch with us via [Gitter](https://gitter.im/cakemanager/cakeadmin-lightstrap)!

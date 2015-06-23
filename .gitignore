@@ -7,3 +7,5 @@
 !/webroot/vendor/bootstrap/dist/**/*
 !/webroot/vendor/jquery/dist/**/*
 !/webroot/vendor/font-awesome/**/*
+vendor/
+composer.lock
