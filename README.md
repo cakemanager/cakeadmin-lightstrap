@@ -4,12 +4,6 @@
 
 ## Requisites
 
-[Composer](https://getcomposer.org/)
-```sh 
-$ curl -sS https://getcomposer.org/installer | php
-$ mv composer.phar /usr/local/bin/composer
-```
-
 [Bower](http://bower.io/)
 ```sh 
 $ npm install -g bower
@@ -17,6 +11,12 @@ $ npm install -g bower
 
 
 ## Installation
+
+Install [CakePHP 3.x Helpers for Bootstrap 3](https://github.com/Holt59/cakephp3-bootstrap3-helpers)
+```sh
+composer require holt59/cakephp3-bootstrap3-helpers:dev-master
+```
+
 
 Use the following code in your `config/bootstrap.php` 
 ```php
