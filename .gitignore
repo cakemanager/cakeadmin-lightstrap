@@ -4,3 +4,6 @@
 /bower_components/
 /node_modules/
 /webroot/vendor/
+!/webroot/vendor/bootstrap/dist/**/*
+!/webroot/vendor/jquery/dist/**/*
+!/webroot/vendor/font-awesome/**/*

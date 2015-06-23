@@ -24,11 +24,12 @@ $this->assign('title', $title);
 			<?= $this->fetch('title') ?>
 		</title>
 		<?= $this->Html->meta('icon') ?>
-		<?= $this->Html->css('../vendor/bootstrap/dist/css/bootstrap.min.css') ?>
-		<?= $this->Html->css('../vendor/font-awesome/css/font-awesome.min.css') ?>
+		<?= $this->Html->css('LightStrap.bootstrap.min.css') ?>
+		<?= $this->Html->css('LightStrap.font-awesome.min.css') ?>
 		<?= $this->Html->css('LightStrap.main') ?>
-		<?= $this->Html->script('../vendor/jquery/dist/jquery.min.js') ?>
-		<?= $this->Html->script('../vendor/bootstrap/dist/js/bootstrap.min.js') ?>
+		<?= $this->Html->script('LightStrap.jquery.min.js') ?>
+		<?= $this->Html->script('LightStrap.bootstrap.min.js') ?>
+		<?= $this->Html->script('LightStrap.main.js') ?>
 		<?= $this->fetch('meta') ?>
 		<?= $this->fetch('css') ?>
 		<?= $this->fetch('script') ?>
