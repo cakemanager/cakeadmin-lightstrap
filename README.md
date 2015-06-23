@@ -46,8 +46,10 @@ $ bower install
 
 ## Usage
 
-
-
+[Configure CakeAdmin](https://github.com/cakemanager/cakeadmin-docs/blob/1.0/docs/general/configurations.md) to select LigthStrap Theme.
+```php
+Configure::write('CA.theme', 'LightStrap');
+```
 ## CakeAdmin
 
 The plugin is [CakeAdmin](https://github.com/cakemanager/cakephp-cakeadmin) compatible!
