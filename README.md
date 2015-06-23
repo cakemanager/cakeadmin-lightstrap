@@ -6,13 +6,13 @@
 
 [Composer](https://getcomposer.org/)
 ```sh 
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
+$ curl -sS https://getcomposer.org/installer | php
+$ mv composer.phar /usr/local/bin/composer
 ```
 
 [Bower](http://bower.io/)
 ```sh 
-npm install -g bower
+$ npm install -g bower
 ```
 
 
