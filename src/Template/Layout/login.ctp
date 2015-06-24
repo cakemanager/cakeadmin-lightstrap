@@ -12,6 +12,7 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+use Cake\Core\Configure;
 
 $this->assign('title', $title);
 ?>
@@ -24,7 +25,7 @@ $this->assign('title', $title);
 			<?= $this->fetch('title') ?>
 		</title>
 		<?= $this->Html->meta('icon') ?>
-		<?= $this->Html->css('LightStrap.bootstrap.min.css') ?>
+		<?= (Configure::check('CA.subtheme')) ? $this->Html->css('LightStrap.themes/' . strtolower(Configure::read('CA.subtheme')) . '/bootstrap.min.css') : $this->Html->css('LightStrap.bootstrap.min.css'); ?>
 		<?= $this->Html->css('LightStrap.font-awesome.min.css') ?>
 		<?= $this->Html->css('LightStrap.main') ?>
 		<?= $this->Html->script('LightStrap.jquery.min.js') ?>
