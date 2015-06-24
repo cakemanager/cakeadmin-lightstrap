@@ -20,14 +20,20 @@ use Cake\Core\Configure;
 	<?= $this->Flash->render('auth') ?>
 	<?= $this->Form->create(null, ['class'=>'form-signin']) ?>
 	<div class="logo-cm">
-	<?= $this->Html->image('cakemanager.png'); ?>
+		<?= $this->Html->image('LightStrap.cakemanager.png'); ?>
 	</div>
 	<fieldset>
 		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'E-mail', 'label' => false]) ?>
-		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '','placeholder' => 'Password', 'label' => false]) ?>
+		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '', 'placeholder' => 'Password', 'label' => false]) ?>
 	</fieldset>
 	<?= $this->Form->button(__('Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
-	<?= $this->Html->link('Forgot password?', ['action' => 'forgot'],['class' => 'btn btn-block btn-link']); ?>
+	<?= $this->Html->link('Forgot password?', ['action' => 'forgot'], ['data-toggle' => 'modal', 'data-target' => '#forgotPass', 'class' => 'btn btn-block btn-link']); ?>
 
 	<?= $this->Form->end() ?>
+	<?php
+	$content = '<i class="fa fa-cog fa-spin"></i>';
+	echo $this->Modal->create(['id' => 'forgotPass']) ;
+	echo $this->Modal->body($content, ['class' => 'my-body-class']) ;
+	echo $this->Modal->end() ;
+	?>
 </div>

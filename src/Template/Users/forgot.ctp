@@ -12,15 +12,27 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+$this->layout = 'ajax';
 ?>
-<div class="users form">
-    <?= $this->Flash->render('auth') ?>
-    <?= $this->Form->create() ?>
-    <fieldset>
-        <legend><?= __('Forgot password') ?></legend>
-        <?= $this->Form->input('email') ?>
-    </fieldset>
-    <?= $this->Form->button(__('Request')); ?>
-    <?= $this->Form->end() ?>
-    <?= $this->Html->link('Login', ['action' => 'login']); ?>
+<?= $this->Form->create() ?>
+
+<div class="modal-header my-header-class">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	<h4>Forgot password</h4>
 </div>
+<div class="modal-body">
+	<div class="users form">
+
+		<?= $this->Flash->render('auth') ?>
+		<fieldset>
+			<?= $this->Form->input('email') ?>
+		</fieldset>
+	</div>
+
+</div>
+<div class="modal-footer ">
+	<?= $this->Html->link('Cancel', ['action' => 'forgot'], ['data-dismiss' => 'modal', 'class' => 'btn btn-default']); ?>
+	<?= $this->Form->button(__('Request'), ['class' => 'btn btn-primary']); ?>
+</div>
+<?= $this->Form->end() ?>
+
