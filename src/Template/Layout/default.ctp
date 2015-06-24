@@ -49,6 +49,10 @@ $this->assign('title', $title);
 						</button>
 						<a class="navbar-brand" href="#">CakeAdmin LightStrap</a>
 					</div>
+					<div class="nav-label">
+						<span class="label label-primary"><a target="_blank" href="http://book.cakephp.org/3.0/">DOCS</a></span>
+						<span class="label label-primary"><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
+					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<?= $this->Menu->menu('headerLeft', 'CakeAdmin.MainMenu') ?>

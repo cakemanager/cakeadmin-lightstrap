@@ -54,3 +54,13 @@ table.table .fa {
 .logo-cm img {
 	max-width:80px;
 }
+
+.nav-label {
+	padding: 12px;
+	float:right;
+	margin-left:20px;
+}
+
+.nav-label a {
+	color: #fff;
+}
