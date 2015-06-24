@@ -1,3 +1,7 @@
+body.login {
+	background-color: #eee;
+}
+
 table.table th.actions {
 	width:95px;
 }
@@ -13,27 +17,40 @@ table.table .fa {
 
 .form-signin {
 	max-width: 420px;
-	padding: 30px 38px 66px;
+	padding: 25px;
 	margin: 0 auto;
-	background-color: #eee;
+	background-color: #fff;
 	border: 3px solid rgba(0,0,0,0.1);
 }
 
-.form-control {
+.form-signin .form-control {
 	position: relative;
 	font-size: 16px;
 	height: auto;
 	padding: 10px;
 }
 
-input[type="text"] {
+.form-signin .form-group {
+	margin-bottom: 0px;
+}
+
+.form-signin input[type="email"] {
 	margin-bottom: 0px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-input[type="password"] {
+.form-signin input[type="password"] {
 	margin-bottom: 20px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
+}
+
+.logo-cm {
+	text-align:center;
+	padding:25px;
+}
+
+.logo-cm img {
+	max-width:80px;
 }

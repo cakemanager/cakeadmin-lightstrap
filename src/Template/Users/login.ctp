@@ -19,8 +19,10 @@ use Cake\Core\Configure;
 <div class="wrapper">
 	<?= $this->Flash->render('auth') ?>
 	<?= $this->Form->create(null, ['class'=>'form-signin']) ?>
+	<div class="logo-cm">
+	<?= $this->Html->image('cakemanager.png'); ?>
+	</div>
 	<fieldset>
-		<legend><?= __('Login') ?></legend>
 		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'E-mail', 'label' => false]) ?>
 		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '','placeholder' => 'Password', 'label' => false]) ?>
 	</fieldset>

@@ -34,7 +34,7 @@ $this->assign('title', $title);
 		<?= $this->fetch('css') ?>
 		<?= $this->fetch('script') ?>
 	</head>
-	<body>
+	<body class="login">
 		<div id="container" class="container">
 			<div id="content">
 				<div class="row">
