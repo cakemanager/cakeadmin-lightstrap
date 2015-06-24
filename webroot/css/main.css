@@ -56,11 +56,17 @@ table.table .fa {
 }
 
 .nav-label {
-	padding: 12px;
+	padding: 13px;
 	float:right;
 	margin-left:20px;
 }
 
 .nav-label a {
 	color: #fff;
+}
+
+.navbar-brand img {
+	max-width: 22px;
+	margin-right: 10px;
+	display: inline-block;
 }

@@ -12,7 +12,7 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace CakeAdmin\View\Cell;
+namespace LightStrap\View\Cell;
 
 use Cake\Utility\Xml;
 use Cake\View\Cell;
@@ -37,7 +37,7 @@ class DashboardCell extends Cell
      */
     public function welcome()
     {
-        $this->set('welcome', "Welcome to your CakeAdmin admin panel.");
+        $this->set('welcome', "Welcome to CakeAdmin");
     }
 
     /**

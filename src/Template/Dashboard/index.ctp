@@ -15,16 +15,13 @@
 $this->set('title', 'Dashboard');
 ?>
 
-<h3>Dashboard</h3>
-
 <div class="row">
 	<div class="col-md-12">
-		<div class="well">
-			<?= $this->cell('CakeAdmin.Dashboard::welcome') ?>
+		<div class="jumbotron">
+			<?= $this->cell('LightStrap.Dashboard::welcome') ?>
 		</div>
 	</div>
 </div>
-
 <div class="row">
 	<div class="col-md-6">
 		<div class="well">
@@ -43,7 +40,6 @@ $this->set('title', 'Dashboard');
 		</div>
 	</div>
 </div>
-
 <div class="row">
 	<div class="col-md-12">
 		<div class="well">
