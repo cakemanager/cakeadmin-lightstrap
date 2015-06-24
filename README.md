@@ -19,6 +19,12 @@ Now load the plugin with the command:
 
 No need to do stuff. Everything is automatically set by loading the plugin.
 
+If you want to apply a Subtheme
+
+	Configure::write('CA.subtheme', 'Cosmo');
+	
+Where Cosmo is a theme name from [Bootswatch](http://bootswatch.com/)
+
 ## CakeAdmin
 
 The plugin is [CakeAdmin](https://github.com/cakemanager/cakephp-cakeadmin) compatible!
