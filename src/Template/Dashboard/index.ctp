@@ -23,38 +23,17 @@ $this->set('title', 'Dashboard');
 </div>
 <div class="row">
 	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<?= $this->cell('CakeAdmin.Dashboard::gettingStarted') ?>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<?= $this->cell('CakeAdmin.Dashboard::plugins'); ?>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<?= $this->cell('CakeAdmin.Dashboard::gettingHelp'); ?>
-			</div>
-		</div>
+		<?= $this->cell('CakeAdmin.Dashboard::gettingStarted') ?>
+		<?= $this->cell('CakeAdmin.Dashboard::plugins'); ?>
+		<?= $this->cell('CakeAdmin.Dashboard::gettingHelp'); ?>
 	</div>
 	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<?= $this->cell('CakeAdmin.Dashboard::latestPosts'); ?>
-			</div>
-		</div>
+		<?= $this->cell('CakeAdmin.Dashboard::latestPosts'); ?>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-12">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<?= $this->cell('CakeAdmin.Dashboard::aboutUs') ?>
-			</div>
-		</div>
+		<?= $this->cell('CakeAdmin.Dashboard::aboutUs') ?>
 	</div>
 </div>
-
