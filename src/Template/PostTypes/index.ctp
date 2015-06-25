@@ -15,7 +15,6 @@
 use Cake\Utility\Hash;
 use Cake\Utility\Inflector;
 
-//debug($type);
 $this->Html->addCrumb('Dashboard', ['action' => 'index', 'controller' => 'dashboard']);
 $this->Html->addCrumb($type['alias'], ['action' => 'index', 'type' => $type['slug']]);
 echo $this->Html->getCrumbList();
