@@ -25,22 +25,22 @@ If you want to apply a Subtheme
 	
 Where Cosmo is a theme name from [Bootswatch](http://bootswatch.com/):
 
-> Cerulean / A calm blue sky
-Cosmo / An ode to Metro
-Cyborg / Jet black and electric blue
-Darkly / Flatly in night mode
-Flatly / Flat and modern
-Journal / Crisp like a new sheet of paper
-Lumen / Light and shadow
-Paper / Material is the metaphor
-Readable / Optimized for legibility
-Sandstone / A touch of warmth
-Simplex / Mini and minimalist
-Slate / Shades of gunmetal gray
-Spacelab / Silvery and sleek
-Superhero / The brave and the blue
-United / Ubuntu orange and unique font
-Yeti / A friendly foundation
+- Cerulean / A calm blue sky
+- Cosmo / An ode to Metro
+- Cyborg / Jet black and electric blue
+- Darkly / Flatly in night mode
+- Flatly / Flat and modern
+- Journal / Crisp like a new sheet of paper
+- Lumen / Light and shadow
+- Paper / Material is the metaphor
+- Readable / Optimized for legibility
+- Sandstone / A touch of warmth
+- Simplex / Mini and minimalist
+- Slate / Shades of gunmetal gray
+- Spacelab / Silvery and sleek
+- Superhero / The brave and the blue
+- United / Ubuntu orange and unique font
+- Yeti / A friendly foundation
 
 ## CakeAdmin
 
