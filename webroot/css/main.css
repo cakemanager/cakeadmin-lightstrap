@@ -3,11 +3,11 @@ body.login {
 }
 
 table.table th.actions {
-	width:95px;
+	width:140px;
 }
 
-table.table .fa {
-	font-size:22px;padding:2px;
+table.table td.actions a {
+	margin:0 2px;
 }
 
 .wrapper {

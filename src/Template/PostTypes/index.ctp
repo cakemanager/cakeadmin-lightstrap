@@ -23,15 +23,17 @@ echo $this->Html->getCrumbList();
 
 <h3>
 	<?= $type['name'] ?>
-	<a class="btn btn-link" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-		<i class="fa fa-filter"></i>
-	</a>
-	<?= $this->Html->link('New ' . Inflector::singularize($type['alias']), ['action' => 'add', 'type' => $type['slug']], ['class'=>'btn btn-primary pull-right']) ?>
+	<span data-toggle="collapse" href="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+		<?= $this->Html->link($this->Html->faIcon('filter'), '#collapseFilter', ['class' => 'btn btn-default btn-sm', 'data-toggle' => 'tooltip', 'data-placement' => 'right', 'title' => __('Filter {0}', ($type['alias'])), 'escape' => false]) ?>
+	</span>
+	<?= $this->Html->link($this->Html->faIcon('plus'), ['action' => 'add', 'type' => $type['slug']], ['class' => 'btn btn-primary btn-sm pull-right', 'data-toggle' => 'tooltip', 'data-placement' => 'left', 'title' => __('New {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
 </h3>
 
-<div class="collapse" id="collapseExample">
-	<div class="well">
-		<?= ($searchFilters ? $this->Search->filterForm($searchFilters) : null) ?>
+<div class="collapse" id="collapseFilter">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<?= ($searchFilters ? $this->Search->filterForm($searchFilters) : null) ?>
+		</div>
 	</div>
 </div>
 
@@ -54,9 +56,9 @@ echo $this->Html->getCrumbList();
 			</td>
 			<?php endforeach; ?>
 			<td class="actions">
-				<?= $this->Html->link(__('<i class="fa fa-search"></i>'), ['action' => 'view', 'type' => $type['slug'], $item->get('id')], ['escape' => false]) ?>
-				<?= $this->Html->link(__('<i class="fa fa-pencil"></i>'), ['action' => 'edit', 'type' => $type['slug'], $item->get('id')], ['escape' => false]) ?>
-				<?= $this->Form->postLink(__('<i class="fa fa-trash"></i>'), ['action' => 'delete', 'type' => $type['slug'], $item->get('id')], ['escape' => false,'confirm' => __('Are you sure you want to delete # {0}?', $item->get('id'))]) ?>
+				<?= $this->Html->link($this->Html->faIcon('search'), ['action' => 'view', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-sm btn-default', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('View {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
+				<?= $this->Html->link($this->Html->faIcon('pencil'), ['action' => 'edit', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-sm btn-primary', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('Edit {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
+				<?= $this->Form->postLink($this->Html->faIcon('trash'), ['action' => 'delete', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('Delete {0}', Inflector::singularize($type['alias'])), 'escape' => false,'confirm' => __('Are you sure you want to delete # {0}?', $item->get('id'))]) ?>
 			</td>
 		</tr>
 
