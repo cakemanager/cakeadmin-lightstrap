@@ -12,7 +12,6 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-?>
-<h4>About Us</h4>
-DEVELOPERS DEVELOPERS DEVELOPERS
-<hr>
+
+echo $this->element('Dashboard/panel', ['title' => 'About Us', 'content' => 'DEVELOPERS DEVELOPERS DEVELOPERS']);
+
