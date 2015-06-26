@@ -19,12 +19,16 @@ Now load the plugin with the command:
 
 No need to do stuff. Everything is automatically set by loading the plugin.
 
-If you want to apply a Subtheme
+## Configuration
 
-	Configure::write('CA.subtheme', 'Cosmo');
+You can set the [Navbar](http://getbootstrap.com/components/#navbar) class:
+
+	Configure::write('CA.LightStrap.navbar', 'navbar-inverse');
+
+You can apply a Subtheme from [Bootswatch](http://bootswatch.com/):
+
+	Configure::write('CA.LightStrap.subtheme', 'Cosmo');
 	
-Where Cosmo is a theme name from [Bootswatch](http://bootswatch.com/):
-
 - Cerulean / A calm blue sky
 - Cosmo / An ode to Metro
 - Cyborg / Jet black and electric blue
