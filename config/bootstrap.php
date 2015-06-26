@@ -14,8 +14,35 @@
  */
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
+use Settings\Core\Setting;
 
 Plugin::load('Bootstrap3');
 
+Configure::write('Settings.Prefixes.LS', 'LightStrap');
+
 Configure::write('CA.viewClass', 'LightStrap.App');
 Configure::write('CA.theme', 'LightStrap');
+
+Setting::register('LS.subtheme', 'Cosmo', [
+    'options' => [
+        null => 'None',
+        'Cerulean' => 'Cerulean',
+        'Cosmo' => 'Cosmo',
+        'Cyborg' => 'Cyborg',
+        'Darkly' => 'Darkly',
+        'Flatly' => 'Flatly',
+        'Journal' => 'Journal',
+        'Lumen' => 'Lumen',
+        'Paper' => 'Paper',
+        'Readable' => 'Readable',
+        'Simplex' => 'Simplex',
+        'Slate' => 'Slate',
+        'Spacelab' => 'Spacelab',
+        'Superhero' => 'Superhero',
+        'United' => 'United',
+        'Yeti' => 'Yeti',
+    ],
+    'type' => 'select'
+]);
+
+Configure::write('CA.LightStrap.subtheme', Setting::read('LS.subtheme'));
