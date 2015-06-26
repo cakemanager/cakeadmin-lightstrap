@@ -55,9 +55,9 @@ echo $this->Html->getCrumbList();
 			</td>
 			<?php endforeach; ?>
 			<td class="actions">
-				<?= $this->Html->link($this->Html->faIcon('search'), ['action' => 'view', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-sm btn-default', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('View {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
-				<?= $this->Html->link($this->Html->faIcon('pencil'), ['action' => 'edit', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-sm btn-primary', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('Edit {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
-				<?= $this->Form->postLink($this->Html->faIcon('trash'), ['action' => 'delete', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('Delete {0}', Inflector::singularize($type['alias'])), 'escape' => false,'confirm' => __('Are you sure you want to delete # {0}?', $item->get('id'))]) ?>
+				<?= $this->Html->link($this->Html->faIcon('search'), ['action' => 'view', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-xs btn-default', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('View {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
+				<?= $this->Html->link($this->Html->faIcon('pencil'), ['action' => 'edit', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-xs btn-primary', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('Edit {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
+				<?= $this->Form->postLink($this->Html->faIcon('trash'), ['action' => 'delete', 'type' => $type['slug'], $item->get('id')], ['class' => 'btn btn-xs btn-danger', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom', 'title' => __('Delete {0}', Inflector::singularize($type['alias'])), 'escape' => false,'confirm' => __('Are you sure you want to delete # {0}?', $item->get('id'))]) ?>
 			</td>
 		</tr>
 
