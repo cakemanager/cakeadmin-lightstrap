@@ -27,7 +27,8 @@ foreach ($settings as $id => $setting) {
 		'type' => (($setting->type) ? $setting->type : 'text'),
 		'label' => ucfirst(end($name)) . (($setting->description) ? ' - ' . $setting->description : ''),
 		'options' => (($setting->options) ? $setting->options : ''),
-		'value' => $setting->value,
+		'value' => (($setting->type === 'checkbox') ? 1 : $setting->value),
+        'checked' => $setting->value,
 	]);
 }
 
