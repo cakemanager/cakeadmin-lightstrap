@@ -14,6 +14,7 @@
  */
 
 use Cake\Core\Configure;
+use Settings\Core\Setting;
 
 $this->assign('title', $title);
 ?>
@@ -23,7 +24,7 @@ $this->assign('title', $title);
 		<?= $this->Html->charset() ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
-			<?= $this->fetch('title') ?>
+			<?= $this->fetch('title') ?> / <?= Setting::read('App.Name') ?>
 		</title>
 		<?= $this->Html->meta('icon') ?>
 		<?= (Configure::check('CA.LightStrap.subtheme')) ? $this->Html->css('LightStrap.themes/' . strtolower(Configure::read('CA.LightStrap.subtheme')) . '/bootstrap.min.css') : $this->Html->css('LightStrap.bootstrap.min.css'); ?>
@@ -47,7 +48,7 @@ $this->assign('title', $title);
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#"><?= $this->Html->image('LightStrap.cakemanager-ico.png'); ?> CakeAdmin LightStrap</a>
+						<a class="navbar-brand" href="#"><?= $this->Html->image('LightStrap.cakemanager-ico.png'); ?> <?= Setting::read('App.Name') ?></a>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav visible-xs">

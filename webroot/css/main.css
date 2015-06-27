@@ -10,6 +10,10 @@ table.table td.actions a {
 	margin:0 2px;
 }
 
+.tab-pane {
+	padding: 10px 0;	
+}
+
 .wrapper {
 	margin-top: 80px;
 	margin-bottom: 20px;
