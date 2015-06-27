@@ -63,6 +63,7 @@ $this->assign('title', $title);
 							</li>
 						</ul>
 						<div class="nav-label">
+							<span class="label label-primary"><a target="_blank" href="http://cakemanager.org/documentations/">CAKEMANAGER.ORG</a></span>
 							<span class="label label-primary"><a target="_blank" href="http://book.cakephp.org/3.0/">DOCS</a></span>
 							<span class="label label-primary"><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
 						</div>
