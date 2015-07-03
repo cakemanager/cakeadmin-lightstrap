@@ -15,7 +15,6 @@
 
 namespace LightStrap\View\Helper;
 
-use Cake\Utility\Text;
 use Cake\View\Helper\FormHelper;
 use Bootstrap3\View\Helper\BootstrapFormHelper;
 
@@ -38,13 +37,12 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 			$jsOptions = '{}';
 		} else {
 			$jsOptions = json_encode($options['jsOptions'], true);
-			//unset($options['jsOptions']);
+			unset($options['jsOptions']);
 		}
 		
 		switch($options['type']) {
 
 			case 'select2':
-				$fieldHash = Text::uuid(); 
 				$options['type'] = 'select';
 				$options['class'] = 'ls-select2-'.$fieldName;
 				echo $this->Html->script('LightStrap.select2');
@@ -54,7 +52,6 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 			break;
 
 			case 'editor':
-				$fieldHash = Text::uuid(); 
 				$options['type'] = 'textarea';
 				$options['class'] = 'ls-summernote-'.$fieldName;
 				echo $this->Html->script('LightStrap.summernote');
@@ -65,7 +62,6 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 			break;
 
 			case 'datepicker':
-				$fieldHash = Text::uuid(); 
 				$options['type'] = 'text';
 				$options['class'] = 'ls-datepicker-'.$fieldName;
 				echo $this->Html->script('LightStrap.datepicker');
@@ -76,7 +72,6 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 			break;
 
 			case 'colorpicker':
-				$fieldHash = Text::uuid();
 				$options['type'] = 'text';
 				$options['class'] = 'ls-colorpicker-'.$fieldName;
 				echo $this->Html->script('LightStrap.colorpicker');
@@ -87,7 +82,6 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 			break;
 
 			case 'toggle':
-				$fieldHash = Text::uuid();
 				$options['type'] = 'checkbox';
 				$options['class'] = 'ls-toggle-'.$fieldName;
 				$options['data-toggle'] = 'toggle';
@@ -99,7 +93,6 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 			break;
 
 			case 'touchspin':
-				$fieldHash = Text::uuid();
 				$options['type'] = 'text';
 				$options['class'] = 'ls-touchspin-'.$fieldName;
 				echo $this->Html->script('LightStrap.touchspin');
