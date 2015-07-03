@@ -106,6 +106,18 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 				echo '$(document).ready(function() { $(".'.$options['class'].'").TouchSpin('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
+			
+			case 'ls-map':
+				$options['type'] = 'text';
+				$options['class'] = $this->_generateFieldClass('ls-locationpicker', $fieldName);
+				$options['append'] = '<div class="div'.$options['class'].'" style="width: 500px; height: 400px;"></div>';
+				echo $this->Html->script('http://maps.google.com/maps/api/js?sensor=false&libraries=places');
+				echo $this->Html->script('LightStrap.locationpicker');
+				$this->Html->scriptStart(['block' => true]);
+				echo '$(document).ready(function() { $(".div'.$options['class'].'").locationpicker('.($lsOptions).'); });';
+				$this->Html->scriptEnd();
+			break;
+			
 		}
 
 		return parent::input($fieldName, $options) ;
