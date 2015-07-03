@@ -21,9 +21,13 @@ No need to do stuff. Everything is automatically set by loading the plugin.
 
 ## Configuration
 
+### Theme configurations
+
 You can set the [Navbar](http://getbootstrap.com/components/#navbar) class:
 
 	Configure::write('CA.LightStrap.navbar', 'navbar-inverse');
+
+### Subtheme
 
 You can apply a Subtheme from [Bootswatch](http://bootswatch.com/):
 
@@ -45,6 +49,32 @@ You can apply a Subtheme from [Bootswatch](http://bootswatch.com/):
 - Superhero / The brave and the blue
 - United / Ubuntu orange and unique font
 - Yeti / A friendly foundation
+
+### LightStrapFormHelper (formFields types)
+
+To use the new types you must define the [formFields](http://cakemanager.org/docs/cakeadmin/1.0/tutorials-and-examples/adding-posttypes/#formfields) type in [postType](http://cakemanager.org/docs/cakeadmin/1.0/tutorials-and-examples/adding-posttypes) and the settings of specific plugins in key `ls-options` as below:
+
+```
+public function postType() {
+	return [
+		'formFields' => [
+			'id',
+			'checkin_date' => ['type' => 'ls-date', 'ls-options' => ['format' => 'dd-mm-yyyy']],
+		],
+	];
+}
+```
+
+All available fields so far:
+
+- `ls-select` using [Select2](https://github.com/select2/select2-bootstrap-theme) ([demo](https://select2.github.io/examples.html), [options](https://select2.github.io/options.html))
+- `ls-editor` using [Summernote](https://github.com/summernote/summernote) ([demo](http://summernote.org/#/example), [options](http://summernote.org/jsduck/#!/api/settings))
+- `ls-date` using [bootstrap-datepicker](https://github.com/eternicode/bootstrap-datepicker) ([demo](http://eternicode.github.io/bootstrap-datepicker), [options](https://bootstrap-datepicker.readthedocs.org/en/latest/options.html))
+- `ls-color` using [Bootstrap Colorpicker](https://github.com/mjolnic/bootstrap-colorpicker) ([demo](http://mjolnic.com/bootstrap-colorpicker), [options](http://mjolnic.com/bootstrap-colorpicker/))
+- `ls-toggle` using [Bootstrap Toggle](https://github.com/minhur/bootstrap-toggle) ([demo](http://www.bootstraptoggle.com), [options](https://github.com/minhur/bootstrap-toggle/#options))
+- `ls-number` using [Bootstrap TouchSpin](https://github.com/istvan-ujjmeszaros/bootstrap-touchspin)
+
+
 
 ## CakeAdmin
 
