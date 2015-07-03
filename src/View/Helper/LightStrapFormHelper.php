@@ -26,8 +26,11 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 		'bHtml' => [
 			'className' => 'Bootstrap3.BootstrapHtml'
 		]
-	] ;
+	];
 
+	protected function _generateTypeClass($prefix, $fieldName){
+		return $prefix . '-' . str_replace(['.'], '', $fieldName);
+	}
 
 	public function input($fieldName, array $options = array()) {
 
@@ -44,16 +47,17 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 
 			case 'select2':
 				$options['type'] = 'select';
-				$options['class'] = 'ls-select2-'.$fieldName;
+				$options['class'] = $this->_generateTypeClass('ls-select2', $fieldName);
 				echo $this->Html->script('LightStrap.select2');
 				echo $this->Html->css('LightStrap.select2');
+				$this->Html->scriptStart(['block' => true]);
 				echo '$(document).ready(function() { $(".'.$options['class'].'").select2('.($jsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 
 			case 'editor':
 				$options['type'] = 'textarea';
-				$options['class'] = 'ls-summernote-'.$fieldName;
+				$options['class'] = $this->_generateTypeClass('ls-summernote', $fieldName);
 				echo $this->Html->script('LightStrap.summernote');
 				echo $this->Html->css('LightStrap.summernote');
 				$this->Html->scriptStart(['block' => true]);
@@ -63,7 +67,7 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 
 			case 'datepicker':
 				$options['type'] = 'text';
-				$options['class'] = 'ls-datepicker-'.$fieldName;
+				$options['class'] = $this->_generateTypeClass('ls-datepicker', $fieldName);
 				echo $this->Html->script('LightStrap.datepicker');
 				echo $this->Html->css('LightStrap.datepicker');
 				$this->Html->scriptStart(['block' => true]);
@@ -73,7 +77,7 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 
 			case 'colorpicker':
 				$options['type'] = 'text';
-				$options['class'] = 'ls-colorpicker-'.$fieldName;
+				$options['class'] = $this->_generateTypeClass('ls-colorpicker', $fieldName);
 				echo $this->Html->script('LightStrap.colorpicker');
 				echo $this->Html->css('LightStrap.colorpicker');
 				$this->Html->scriptStart(['block' => true]);
@@ -83,7 +87,7 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 
 			case 'toggle':
 				$options['type'] = 'checkbox';
-				$options['class'] = 'ls-toggle-'.$fieldName;
+				$options['class'] = $this->_generateTypeClass('ls-toggle', $fieldName);
 				$options['data-toggle'] = 'toggle';
 				echo $this->Html->script('LightStrap.toggle');
 				echo $this->Html->css('LightStrap.toggle');
@@ -94,7 +98,7 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 
 			case 'touchspin':
 				$options['type'] = 'text';
-				$options['class'] = 'ls-touchspin-'.$fieldName;
+				$options['class'] = $this->_generateTypeClass('ls-touchspin', $fieldName);
 				echo $this->Html->script('LightStrap.touchspin');
 				echo $this->Html->css('LightStrap.touchspin');
 				$this->Html->scriptStart(['block' => true]);
