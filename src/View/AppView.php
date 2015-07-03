@@ -33,7 +33,7 @@ class AppView extends _AppView
     public function initialize()
     {
         $this->loadHelper('Html', ['className' => 'Bootstrap3.BootstrapHtml']);
-        $this->loadHelper('Form', ['className' => 'Bootstrap3.BootstrapForm']);
+        $this->loadHelper('Form', ['className' => 'LightStrap.LightStrapForm']);
         $this->loadHelper('Paginator', ['className' => 'Bootstrap3.BootstrapPaginator']);
         $this->loadHelper('Modal', ['className' => 'Bootstrap3.BootstrapModal']);
     }
