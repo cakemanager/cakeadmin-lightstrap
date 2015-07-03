@@ -65,14 +65,14 @@ public function postType() {
 }
 ```
 
-All available fields so far:
+All available field types so far:
 
 - `ls-select` using [Select2](https://github.com/select2/select2-bootstrap-theme) ([demo](https://select2.github.io/examples.html), [options](https://select2.github.io/options.html))
 - `ls-editor` using [Summernote](https://github.com/summernote/summernote) ([demo](http://summernote.org/#/example), [options](http://summernote.org/jsduck/#!/api/settings))
 - `ls-date` using [bootstrap-datepicker](https://github.com/eternicode/bootstrap-datepicker) ([demo](http://eternicode.github.io/bootstrap-datepicker), [options](https://bootstrap-datepicker.readthedocs.org/en/latest/options.html))
 - `ls-color` using [Bootstrap Colorpicker](https://github.com/mjolnic/bootstrap-colorpicker) ([demo](http://mjolnic.com/bootstrap-colorpicker), [options](http://mjolnic.com/bootstrap-colorpicker/))
 - `ls-toggle` using [Bootstrap Toggle](https://github.com/minhur/bootstrap-toggle) ([demo](http://www.bootstraptoggle.com), [options](https://github.com/minhur/bootstrap-toggle/#options))
-- `ls-number` using [Bootstrap TouchSpin](https://github.com/istvan-ujjmeszaros/bootstrap-touchspin)
+- `ls-number` using [Bootstrap TouchSpin](https://github.com/istvan-ujjmeszaros/bootstrap-touchspin) ([demo](http://www.virtuosoft.eu/code/bootstrap-touchspin), [options](http://www.virtuosoft.eu/code/bootstrap-touchspin))
 
 
 
