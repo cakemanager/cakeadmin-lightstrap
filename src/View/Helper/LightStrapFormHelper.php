@@ -36,73 +36,74 @@ class LightStrapFormHelper extends BootstrapFormHelper {
 
 		$options = $this->_parseOptions($fieldName, $options);
 		
-		if(!isset($options['jsOptions'])){
-			$jsOptions = '{}';
+		if(!isset($options['ls-options'])){
+			$lsOptions = '{}';
 		} else {
-			$jsOptions = json_encode($options['jsOptions'], true);
-			unset($options['jsOptions']);
+			$lsOptions = json_encode($options['ls-options'], true);
+			unset($options['ls-options']);
 		}
 		
 		switch($options['type']) {
 
-			case 'select2':
+			case 'ls-select':
 				$options['type'] = 'select';
 				$options['class'] = $this->_generateFieldClass('ls-select2', $fieldName);
 				echo $this->Html->script('LightStrap.select2');
 				echo $this->Html->css('LightStrap.select2');
 				$this->Html->scriptStart(['block' => true]);
-				echo '$(document).ready(function() { $(".'.$options['class'].'").select2('.($jsOptions).'); });';
+				echo '$(document).ready(function() { $(".'.$options['class'].'").select2('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 
+			case 'ls-editor':
 			case 'editor':
 				$options['type'] = 'textarea';
 				$options['class'] = $this->_generateFieldClass('ls-summernote', $fieldName);
 				echo $this->Html->script('LightStrap.summernote');
 				echo $this->Html->css('LightStrap.summernote');
 				$this->Html->scriptStart(['block' => true]);
-				echo '$(document).ready(function() { $(".'.$options['class'].'").summernote('.($jsOptions).'); });';
+				echo '$(document).ready(function() { $(".'.$options['class'].'").summernote('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 
-			case 'datepicker':
+			case 'ls-date':
 				$options['type'] = 'text';
 				$options['class'] = $this->_generateFieldClass('ls-datepicker', $fieldName);
 				echo $this->Html->script('LightStrap.datepicker');
 				echo $this->Html->css('LightStrap.datepicker');
 				$this->Html->scriptStart(['block' => true]);
-				echo '$(document).ready(function() { $(".'.$options['class'].'").datepicker('.($jsOptions).'); });';
+				echo '$(document).ready(function() { $(".'.$options['class'].'").datepicker('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 
-			case 'colorpicker':
+			case 'ls-color':
 				$options['type'] = 'text';
 				$options['class'] = $this->_generateFieldClass('ls-colorpicker', $fieldName);
 				echo $this->Html->script('LightStrap.colorpicker');
 				echo $this->Html->css('LightStrap.colorpicker');
 				$this->Html->scriptStart(['block' => true]);
-				echo '$(document).ready(function() { $(".'.$options['class'].'").colorpicker('.($jsOptions).'); });';
+				echo '$(document).ready(function() { $(".'.$options['class'].'").colorpicker('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 
-			case 'toggle':
+			case 'ls-toggle':
 				$options['type'] = 'checkbox';
 				$options['class'] = $this->_generateFieldClass('ls-toggle', $fieldName);
 				$options['data-toggle'] = 'toggle';
 				echo $this->Html->script('LightStrap.toggle');
 				echo $this->Html->css('LightStrap.toggle');
 				$this->Html->scriptStart(['block' => true]);
-				echo '$(document).ready(function() { $(".'.$options['class'].'").bootstrapToggle('.($jsOptions).'); });';
+				echo '$(document).ready(function() { $(".'.$options['class'].'").bootstrapToggle('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 
-			case 'touchspin':
+			case 'ls-number':
 				$options['type'] = 'text';
 				$options['class'] = $this->_generateFieldClass('ls-touchspin', $fieldName);
 				echo $this->Html->script('LightStrap.touchspin');
 				echo $this->Html->css('LightStrap.touchspin');
 				$this->Html->scriptStart(['block' => true]);
-				echo '$(document).ready(function() { $(".'.$options['class'].'").TouchSpin('.($jsOptions).'); });';
+				echo '$(document).ready(function() { $(".'.$options['class'].'").TouchSpin('.($lsOptions).'); });';
 				$this->Html->scriptEnd();
 			break;
 		}
