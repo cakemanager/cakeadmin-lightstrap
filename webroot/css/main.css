@@ -2,6 +2,9 @@ body.login {
 	background-color: #eee;
 }
 
+body {
+	margin-bottom:40px;	
+}
 table.table th.actions {
 	width:140px;
 }
