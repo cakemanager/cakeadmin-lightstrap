@@ -45,4 +45,23 @@ Setting::register('LS.subtheme', 'Cosmo', [
     'type' => 'select'
 ]);
 
+
 Configure::write('CA.LightStrap.subtheme', Setting::read('LS.subtheme'));
+
+Setting::register('LS.navbar', 'navbar-default', [
+    'options' => [
+        'navbar-default' => 'Default',
+        'navbar-inverse' => 'Inverse',
+    ],
+    'type' => 'select'
+]);
+Configure::write('CA.LightStrap.navbar', Setting::read('LS.navbar'));
+
+Setting::register('LS.container', 'container', [
+    'options' => [
+        'container' => 'Fixed',
+        'container-fluid' => 'Fluid',
+    ],
+    'type' => 'select'
+]);
+Configure::write('CA.LightStrap.container', Setting::read('LS.container'));

@@ -27,7 +27,7 @@ $this->assign('title', $title);
 			<?= $this->fetch('title') ?> / <?= Setting::read('App.Name') ?>
 		</title>
 		<?= $this->Html->meta('icon') ?>
-		<?= (Configure::check('CA.LightStrap.subtheme')) ? $this->Html->css('LightStrap.themes/' . strtolower(Configure::read('CA.LightStrap.subtheme')) . '/bootstrap.min.css') : $this->Html->css('LightStrap.bootstrap.min.css'); ?>
+		<?= (Configure::read('CA.LightStrap.subtheme')!=='') ? $this->Html->css('LightStrap.themes/' . strtolower(Configure::read('CA.LightStrap.subtheme')) . '/bootstrap.min.css') : $this->Html->css('LightStrap.bootstrap.min.css'); ?>
 		<?= $this->Html->css('LightStrap.font-awesome.min.css') ?>
 		<?= $this->Html->css('LightStrap.main') ?>
 		<?= $this->Html->script('LightStrap.jquery.min.js') ?>
@@ -39,8 +39,8 @@ $this->assign('title', $title);
 	</head>
 	<body>
 		<header>
-			<nav class="navbar <?= (Configure::check('CA.LightStrap.navbar')) ? Configure::read('CA.LightStrap.navbar') : 'navbar-inverse' ?> navbar-static-top">
-				<div class="container">
+			<nav class="navbar <?= (Configure::read('CA.LightStrap.navbar')!=='') ? Configure::read('CA.LightStrap.navbar') : 'navbar-inverse' ?> navbar-static-top">
+				<div class="<?= (Configure::read('CA.LightStrap.container')!=='') ? Configure::read('CA.LightStrap.container') : 'container' ?>">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
@@ -71,7 +71,7 @@ $this->assign('title', $title);
 				</div>
 			</nav>
 		</header>
-		<div id="container" class="container">
+		<div id="container" class="<?= (Configure::read('CA.LightStrap.container')!=='') ? Configure::read('CA.LightStrap.container') : 'container' ?>">
 			<div id="content">
 
 				<div class="row">
