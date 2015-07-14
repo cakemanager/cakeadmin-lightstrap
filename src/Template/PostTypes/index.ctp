@@ -51,7 +51,9 @@ echo $this->Html->getCrumbList();
 		<tr>
 			<?php foreach ($type['tableColumns'] as $column => $options) : ?>
 			<td>
+				<?= $options['before'] ?>
 				<?= Hash::get($item->toArray(), $options['get']) ?>
+				<?= $options['after'] ?>
 			</td>
 			<?php endforeach; ?>
 			<td class="actions">

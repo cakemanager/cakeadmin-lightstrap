@@ -20,7 +20,7 @@ $this->Html->addCrumb($type['alias'], ['action' => 'index', 'type' => $type['slu
 $this->Html->addCrumb('Edit ' . Inflector::singularize($type['alias']), '');
 echo $this->Html->getCrumbList();
 ?>
-<?= $this->Form->create($entity); ?>
+<?= $this->Form->create($entity, $type['formFields']['_create']); ?>
 <fieldset>
     <legend><?= __('Edit ' . Inflector::singularize($type['alias'])) ?></legend>
     <?php
