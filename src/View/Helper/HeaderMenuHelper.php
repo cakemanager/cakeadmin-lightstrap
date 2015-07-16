@@ -25,25 +25,25 @@ use Utils\View\Helper\MenuBuilderInterface;
  * Thats the `main` area.
  *
  */
-class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
+class HeaderMenuHelper extends Helper implements MenuBuilderInterface
 {
-	/**
+    /**
      * Used helpers
      *
      * @var array
      */
-	public $helpers = [
-		'Html'
-	];
+    public $helpers = [
+        'Html'
+    ];
 
-	/**
+    /**
      * Default configuration.
      *
      * @var array
      */
-	protected $_defaultConfig = [];
+    protected $_defaultConfig = [];
 
-	/**
+    /**
      * afterMenu
      *
      * Method after the menu has been build.
@@ -52,12 +52,12 @@ class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
      * @param array $options Options.
      * @return string
      */
-	public function afterMenu($menu = [], $options = [])
-	{
-		return '';
-	}
+    public function afterMenu($menu = [], $options = [])
+    {
+        return '</ul>';
+    }
 
-	/**
+    /**
      * afterSubItem
      *
      * Method after a submenu item has been build.
@@ -66,12 +66,12 @@ class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
      * @param array $options Options.
      * @return string
      */
-	public function afterSubItem($item = [], $options = [])
-	{
-		return '';
-	}
+    public function afterSubItem($item = [], $options = [])
+    {
+        return '</ul>';
+    }
 
-	/**
+    /**
      * beforeMenu
      *
      * Method before the menu has been build.
@@ -80,12 +80,12 @@ class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
      * @param array $options Options.
      * @return string
      */
-	public function beforeMenu($menu = [], $options = [])
-	{
-		return '';
-	}
+    public function beforeMenu($menu = [], $options = [])
+    {
+        return '<ul class="nav navbar-nav navbar-right">';
+    }
 
-	/**
+    /**
      * afterSubItem
      *
      * Method before a submenu item has been build.
@@ -94,12 +94,12 @@ class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
      * @param array $options Options.
      * @return string
      */
-	public function beforeSubItem($item = [], $options = [])
-	{
-		return '';
-	}
+    public function beforeSubItem($item = [], $options = [])
+    {
+        return '<ul class="dropdown-menu">';
+    }
 
-	/**
+    /**
      * item
      *
      * Method to build an menu item.
@@ -108,14 +108,18 @@ class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
      * @param array $options Options.
      * @return string
      */
-	public function item($item = [], $options = [])
-	{
-		$html = '<li ' . ($item['active'] ? 'class="active"' : '') . '>' .
-			$this->Html->link(__($item['title']), $item['url']) . '</li>';
-		return $html;
-	}
+    public function item($item = [], $options = [])
+    {
+        return $this->Html->link($item['title'], $item['url'], [
+            'class' => 'dropdown-toggle',
+            'data-toggle' => 'dropdown',
+            'aria-haspopup' => 'true',
+            'aria-expanded' => 'false',
+            ''
+        ]);
+    }
 
-	/**
+    /**
      * item
      *
      * Method to build an submenu item.
@@ -124,8 +128,40 @@ class HeaderLeftMenuHelper extends Helper implements MenuBuilderInterface
      * @param array $options Options.
      * @return string
      */
-	public function subItem($item = [], $options = [])
-	{
-		return '';
-	}
+    public function subItem($item = [], $options = [])
+    {
+        $html = '<li>';
+        $html .= $this->Html->link($item['title'], $item['url']);
+        $html .= '</li>';
+
+        return $html;
+    }
+
+    /**
+     * beforeItem
+     *
+     * Method before an item has been build.
+     *
+     * @param array $item The menu item.
+     * @param array $options Options.
+     * @return string
+     */
+    public function beforeItem($item = [], $options = [])
+    {
+        return '<li class="dropdown">';
+    }
+
+    /**
+     * afterItem
+     *
+     * Method after an item has been build.
+     *
+     * @param array $item The menu item.
+     * @param array $options Options.
+     * @return string
+     */
+    public function afterItem($item = [], $options = [])
+    {
+        return '</li>';
+    }
 }
