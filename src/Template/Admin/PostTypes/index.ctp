@@ -28,7 +28,7 @@ echo $this->Html->getCrumbList();
 	<?= $this->Html->link($this->Html->faIcon('plus'), ['action' => 'add', 'type' => $type['slug']], ['class' => 'btn btn-primary btn-sm pull-right', 'data-toggle' => 'tooltip', 'data-placement' => 'left', 'title' => __('New {0}', Inflector::singularize($type['alias'])), 'escape' => false]) ?>
 </h3>
 
-<div class="collapse" id="collapseFilter">
+<div class="collapse" id="collapseFilter" data-posttype="<?= $type['slug'] ?>">
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<?= ($searchFilters ? $this->Search->filterForm($searchFilters) : null) ?>
