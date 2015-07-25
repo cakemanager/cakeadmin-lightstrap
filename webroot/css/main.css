@@ -77,3 +77,8 @@ table.table td.actions a {
 	margin-right: 10px;
 	display: inline-block;
 }
+
+/* Enable nav dropdowns by hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
