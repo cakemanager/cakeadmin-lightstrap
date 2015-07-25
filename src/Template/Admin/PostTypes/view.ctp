@@ -32,7 +32,7 @@ echo $this->Html->getCrumbList();
 						<?php foreach ($type['formFields'] as $field => $options) { ?>
 						<?php if (substr($field, 0, 1) !== '_') { ?>
 						<tr>
-							<td><?php echo $field; ?></td>
+							<td><?php echo Inflector::humanize($field); ?></td>
 							<td><?php echo $data[$field]; ?></td>
 						</tr>
 						<?php } ?>
