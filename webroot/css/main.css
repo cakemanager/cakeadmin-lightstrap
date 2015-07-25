@@ -21,6 +21,12 @@ table.table td.actions a {
 	margin:0 2px;
 }
 
+/* PostType view */
+.table-view tr td:first-child{
+	font-weight: bold;
+	width: 200px;
+}
+
 /* Settings */
 .tab-pane {
 	padding: 10px 0;	
