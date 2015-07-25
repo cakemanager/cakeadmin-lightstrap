@@ -107,18 +107,9 @@ table.table td.actions a {
     position: absolute;
     width: 4px;
     display: block;
-    background: currentColor;
+    background: #ddd;
     top: 0px;
     bottom: 0px;
-    margin-left: 30px;
-}
-
-.timeline .separator {
-    border-top: 1px solid currentColor;
-    padding: 5px;
-    padding-left: 40px;
-    font-style: italic;
-    font-size: .9em;
     margin-left: 30px;
 }
 
@@ -133,7 +124,7 @@ table.table td.actions a {
     height: 12px;
     display: block;
     border-radius: 50%;
-    background: currentColor;
+    background: #ddd;
 }
 
 .timeline .panel {
