@@ -1,3 +1,4 @@
+/* Common */
 body.login {
 	background-color: #eee;
 }
@@ -5,6 +6,13 @@ body.login {
 body {
 	margin-bottom:40px;	
 }
+
+.wrapper {
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+/* PostType index */
 table.table th.actions {
 	width:140px;
 }
@@ -13,15 +21,12 @@ table.table td.actions a {
 	margin:0 2px;
 }
 
+/* Settings */
 .tab-pane {
 	padding: 10px 0;	
 }
 
-.wrapper {
-	margin-top: 80px;
-	margin-bottom: 20px;
-}
-
+/* Login */
 .form-signin {
 	max-width: 420px;
 	padding: 25px;
@@ -68,6 +73,7 @@ table.table td.actions a {
 	margin-left:20px;
 }
 
+/* Navbar */
 .nav-label a {
 	color: #fff;
 }
@@ -82,3 +88,93 @@ table.table td.actions a {
 .dropdown:hover .dropdown-menu {
     display: block;
  }
+
+/* Notifications */
+.timeline {
+    position: relative;
+    padding: 21px 0px 10px;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+.timeline .line {
+    position: absolute;
+    width: 4px;
+    display: block;
+    background: currentColor;
+    top: 0px;
+    bottom: 0px;
+    margin-left: 30px;
+}
+
+.timeline .separator {
+    border-top: 1px solid currentColor;
+    padding: 5px;
+    padding-left: 40px;
+    font-style: italic;
+    font-size: .9em;
+    margin-left: 30px;
+}
+
+.timeline .line::before { top: -4px; }
+.timeline .line::after { bottom: -4px; }
+.timeline .line::before,
+.timeline .line::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.timeline .panel {
+    position: relative;
+    margin: 10px 0px 21px 70px;
+    clear: both;
+}
+
+.timeline .panel::before {
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: -24px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: inherit;
+    border-width: 12px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.timeline .panel .panel-heading.icon * { font-size: 20px; vertical-align: middle; line-height: 40px; }
+.timeline .panel .panel-heading.icon {
+    position: absolute;
+    left: -59px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 50%;
+    text-align: center;
+    float: left;
+}
+
+.timeline .panel-outline {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.timeline .panel-outline .panel-body {
+    padding: 10px 0px;
+}
+
+.timeline .panel-outline .panel-heading:not(.icon),
+.timeline .panel-outline .panel-footer {
+    display: none;
+}
