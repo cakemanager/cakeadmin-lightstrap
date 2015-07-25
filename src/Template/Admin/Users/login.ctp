@@ -17,11 +17,12 @@ use Cake\Core\Configure;
 ?>
 
 <div class="wrapper">
-	<?= $this->Flash->render('auth') ?>
 	<?= $this->Form->create(null, ['class'=>'form-signin']) ?>
 	<div class="logo-cm">
 		<?= $this->Html->image('LightStrap.cakemanager.png'); ?>
 	</div>
+	<?= $this->Flash->render('auth') ?>
+	<?= $this->Flash->render() ?>
 	<fieldset>
 		<?= $this->Form->input(Configure::read('CA.fields.username'),['placeholder' => 'E-mail', 'label' => false]) ?>
 		<?= $this->Form->input(Configure::read('CA.fields.password'), ['value' => '', 'placeholder' => 'Password', 'label' => false]) ?>

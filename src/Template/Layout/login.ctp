@@ -40,7 +40,6 @@ $this->assign('title', $title);
 			<div id="content">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<?= $this->Flash->render() ?>
 						<?= $this->fetch('content') ?>
 					</div>
 				</div>
