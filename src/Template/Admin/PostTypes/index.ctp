@@ -31,7 +31,7 @@ echo $this->Html->getCrumbList();
 <div class="collapse" id="collapseFilter" data-posttype="<?= $type['slug'] ?>">
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<?= ($searchFilters ? $this->Search->filterForm($searchFilters) : null) ?>
+			<?= ($searchFilters ? $this->Search->filterForm($searchFilters, ['class' => 'form-inline']) : null) ?>
 		</div>
 	</div>
 </div>
