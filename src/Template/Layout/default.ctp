@@ -1,17 +1,17 @@
 <?php
 /**
- * CakeManager (http://cakemanager.org)
- * Copyright (c) http://cakemanager.org
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) http://cakemanager.org
- * @link          http://cakemanager.org CakeManager Project
- * @since         1.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
+* CakeManager (http://cakemanager.org)
+* Copyright (c) http://cakemanager.org
+*
+* Licensed under The MIT License
+* For full copyright and license information, please see the LICENSE.txt
+* Redistributions of files must retain the above copyright notice.
+*
+* @copyright     Copyright (c) http://cakemanager.org
+* @link          http://cakemanager.org CakeManager Project
+* @since         1.0
+* @license       http://www.opensource.org/licenses/mit-license.php MIT License
+*/
 
 use Cake\Core\Configure;
 use Settings\Core\Setting;
@@ -38,56 +38,45 @@ $this->assign('title', $title);
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<header>
-    <nav
-        class="navbar <?= (Configure::read('CA.LightStrap.navbar') !== '') ? Configure::read('CA.LightStrap.navbar') : 'navbar-inverse' ?> navbar-static-top">
-        <div
-            class="<?= (Configure::read('CA.LightStrap.container') !== '') ? Configure::read('CA.LightStrap.container') : 'container' ?>">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"
-                   href="#"><?= $this->Html->image('LightStrap.cakemanager-ico.png'); ?> <?= Setting::read('App.Name') ?></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav visible-xs">
-                    <?= $this->Menu->menu('main', 'CakeAdmin.MainMenu') ?>
-                </ul>
-                <?= $this->Menu->menu('headerLeft', 'LightStrap.HeaderMenu') ?>
-            </div>
-        </div>
-    </nav>
-</header>
-<div id="container"
-     class="<?= (Configure::read('CA.LightStrap.container') !== '') ? Configure::read('CA.LightStrap.container') : 'container' ?>">
-    <div id="content">
+    <header>
 
-        <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <ul class="nav nav-pills nav-stacked hidden-xs">
-                    <?= $this->Menu->menu('main', 'CakeAdmin.MainMenu') ?>
-                </ul>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-10">
+    </header>
+
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a class="navbar-brand" href="#"><?= $this->Html->image('LightStrap.cakemanager-ico.png'); ?> <?= Setting::read('App.Name') ?></a>
+                </li>
+                <?= $this->Menu->menu('main', 'CakeAdmin.MainMenu') ?>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+
+            <nav class="navbar <?= (Configure::read('CA.LightStrap.navbar') !== '') ? Configure::read('CA.LightStrap.navbar') : 'navbar-inverse' ?> navbar-static-top">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <?= $this->Menu->menu('headerLeft', 'LightStrap.HeaderMenu') ?>
+                </div>
+            </nav>
+            <div class="container-fluid">
                 <?= $this->Flash->render() ?>
                 <?= $this->fetch('content') ?>
             </div>
         </div>
     </div>
-    <footer>
-    </footer>
-</div>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 </body>
 </html>

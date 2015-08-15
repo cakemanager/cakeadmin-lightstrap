@@ -4,7 +4,7 @@ body.login {
 }
 
 body {
-	margin-bottom:40px;	
+	margin-bottom:40px;
 }
 
 .wrapper {
@@ -29,7 +29,7 @@ table.table td.actions a {
 
 /* Settings */
 .tab-pane {
-	padding: 10px 0;	
+	padding: 10px 0;
 }
 
 /* Login */
@@ -92,86 +92,205 @@ table.table td.actions a {
 
 /* Enable nav dropdowns by hover */
 .dropdown:hover .dropdown-menu {
-    display: block;
- }
+	display: block;
+}
 
 /* Notifications */
 .timeline {
-    position: relative;
-    padding: 21px 0px 10px;
-    margin-top: 4px;
-    margin-bottom: 30px;
+	position: relative;
+	padding: 21px 0px 10px;
+	margin-top: 4px;
+	margin-bottom: 30px;
 }
 
 .timeline .line {
-    position: absolute;
-    width: 4px;
-    display: block;
-    background: #ddd;
-    top: 0px;
-    bottom: 0px;
-    margin-left: 30px;
+	position: absolute;
+	width: 4px;
+	display: block;
+	background: #ddd;
+	top: 0px;
+	bottom: 0px;
+	margin-left: 30px;
 }
 
 .timeline .line::before { top: -4px; }
 .timeline .line::after { bottom: -4px; }
 .timeline .line::before,
 .timeline .line::after {
-    content: '';
-    position: absolute;
-    left: -4px;
-    width: 12px;
-    height: 12px;
-    display: block;
-    border-radius: 50%;
-    background: #ddd;
+	content: '';
+	position: absolute;
+	left: -4px;
+	width: 12px;
+	height: 12px;
+	display: block;
+	border-radius: 50%;
+	background: #ddd;
 }
 
 .timeline .panel {
-    position: relative;
-    margin: 10px 0px 21px 70px;
-    clear: both;
+	position: relative;
+	margin: 10px 0px 21px 70px;
+	clear: both;
 }
 
 .timeline .panel::before {
-    position: absolute;
-    display: block;
-    top: 8px;
-    left: -24px;
-    content: '';
-    width: 0px;
-    height: 0px;
-    border: inherit;
-    border-width: 12px;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
+	position: absolute;
+	display: block;
+	top: 8px;
+	left: -24px;
+	content: '';
+	width: 0px;
+	height: 0px;
+	border: inherit;
+	border-width: 12px;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
 }
 
 .timeline .panel .panel-heading.icon * { font-size: 20px; vertical-align: middle; line-height: 40px; }
 .timeline .panel .panel-heading.icon {
-    position: absolute;
-    left: -59px;
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 0px;
-    border-radius: 50%;
-    text-align: center;
-    float: left;
+	position: absolute;
+	left: -59px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	padding: 0px;
+	border-radius: 50%;
+	text-align: center;
+	float: left;
 }
 
 .timeline .panel-outline {
-    border-color: transparent;
-    background: transparent;
-    box-shadow: none;
+	border-color: transparent;
+	background: transparent;
+	box-shadow: none;
 }
 
 .timeline .panel-outline .panel-body {
-    padding: 10px 0px;
+	padding: 10px 0px;
 }
 
 .timeline .panel-outline .panel-heading:not(.icon),
 .timeline .panel-outline .panel-footer {
-    display: none;
+	display: none;
+}
+
+/* Sidebar */
+#wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+	padding-left: 250px;
+}
+
+#sidebar-wrapper {
+	z-index: 1000;
+	position: fixed;
+	left: 250px;
+	width: 0;
+	height: 100%;
+	margin-left: -250px;
+	overflow-y: auto;
+	background: #000;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+	width: 250px;
+}
+
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding: 15px 0;
+}
+
+#wrapper.toggled #page-content-wrapper {
+	position: absolute;
+	margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #999999;
+}
+
+.sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+	text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+	height: 65px;
+	font-size: 18px;
+	line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+	color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+	color: #fff;
+	background: none;
+}
+
+@media(min-width:768px) {
+	#wrapper {
+		padding-left: 250px;
+	}
+
+	#wrapper.toggled {
+		padding-left: 0;
+	}
+
+	#sidebar-wrapper {
+		width: 250px;
+	}
+
+	#wrapper.toggled #sidebar-wrapper {
+		width: 0;
+	}
+
+	#page-content-wrapper {
+		padding: 20px;
+		position: relative;
+	}
+
+	#wrapper.toggled #page-content-wrapper {
+		position: relative;
+		margin-right: 0;
+	}
 }
