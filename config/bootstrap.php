@@ -16,7 +16,7 @@ use Cake\Core\Configure;
 use Cake\Core\Plugin;
 use Settings\Core\Setting;
 
-Plugin::load('Bootstrap3');
+Plugin::load('Bootstrap');
 
 Configure::write('Settings.Prefixes.LS', 'LightStrap');
 
