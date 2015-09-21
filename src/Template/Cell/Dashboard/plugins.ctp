@@ -12,5 +12,22 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+use Cake\Core\Configure;
 
-echo $this->element('Dashboard/panel', ['title' => 'Useful Plugins from the CakeManager Team', 'list' => $list]);
+?>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Useful Plugins from the CakeManager Team</h3>
+    </div>
+
+    <div class="list-group">
+        <?php foreach ($data as $item): ?>
+            <a href="<?= $item['github'] ?>" target="_blank" class="list-group-item">
+                <h5 class="list-group-item-heading"><?= $item['name'] ?></h5>
+
+                <p class="list-group-item-text"><?= $item['description'] ?></p>
+            </a>
+        <?php endforeach; ?>
+    </div>
+
+</div>

@@ -12,18 +12,33 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+use Cake\Core\Configure;
 use Cake\I18n\Time;
 
-$list = [];
+?>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Latest Posts</h3>
+    </div>
 
-foreach ($posts as $post): 
-$time = new Time($post['pubDate']);
-$description = 'Author: ' . $post['dc:creator'] . ' | ' . $time->timeAgoInWords();
-$list[$post['title']] = ['url' => $post['link'], 'description' => $description];
-endforeach;
+    <div class="list-group">
+        <?php foreach ($data as $post): $time = new Time($post['created']); ?>
+            <a href="<?= Configure::read('CA.Domain') . $post['path'] ?>" target="_blank" class="list-group-item">
+                <h5 class="list-group-item-heading"><?= $post['title'] ?></h5>
 
-echo $this->element('Dashboard/panel', [
-	'title' => 'Latest Posts',
-	'list' => $list,
-	'footer' => __('Read more at {0}', $this->Html->link('http://cakemanager.org','http://cakemanager.org', ['target' => '_blank'])). ' | '. $this->Html->link('Follow @CakeManager','https://twitter.com/CakeManager', ['target' => '_blank', 'class' => 'twitter-follow-button', 'data-show-count' => 'false'])
-]);
+                <p class="list-group-item-text">Author: <?= $post['created_by']['email'] ?>
+                    | <?= $time->timeAgoInWords(); ?></p>
+            </a>
+        <?php endforeach; ?>
+    </div>
+    <div class="panel-footer">
+        <?= __('Read more at {0}', $this->Html->link('http://cakemanager.org', 'http://cakemanager.org', ['target' => '_blank']))
+        . ' | ' . $this->Html->link('Follow @CakeManager', 'https://twitter.com/CakeManager', [
+            'target' => '_blank',
+            'class' => 'twitter-follow-button',
+            'data-show-count' => 'false'
+        ]) ?>
+    </div>
+
+</div>
+
