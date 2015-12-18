@@ -14,12 +14,12 @@
  */
 namespace LightStrap\View;
 
-use App\View\AppView as _AppView;
+use Cake\View\View;
 
 /**
  * App View class
  */
-class AppView extends _AppView
+class AppView extends View
 {
 
     /**
