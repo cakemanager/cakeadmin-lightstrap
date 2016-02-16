@@ -35,7 +35,7 @@ use Cake\Core\Configure;
             'label' => false
         ]) ?>
     </fieldset>
-    <?= $this->Form->button(__('Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
+    <?= $this->Form->button(__d('LightStrap', 'Login'), ['class' => 'btn btn-lg btn-primary btn-block']); ?>
     <?= $this->Html->link('Forgot password?', ['action' => 'forgot'], ['data-toggle' => 'modal', 'data-target' => '#forgotPass', 'class' => 'btn btn-block btn-link']); ?>
 
     <?= $this->Form->end() ?>

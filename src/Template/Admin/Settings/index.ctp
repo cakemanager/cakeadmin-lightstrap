@@ -1,7 +1,7 @@
 <?php
 
-$this->Html->addCrumb('Dashboard', ['action' => 'index', 'controller' => 'dashboard']);
-$this->Html->addCrumb('Settings', ['action' => 'index', 'controller' => 'settings']);
+$this->Html->addCrumb(__d('LightStrap', 'Dashboard'), ['action' => 'index', 'controller' => 'dashboard']);
+$this->Html->addCrumb(__d('LightStrap', 'Settings'), ['action' => 'index', 'controller' => 'settings']);
 //$this->Html->addCrumb($prefix, ['action' => 'index', $key]);
 echo $this->Html->getCrumbList();
 ?>
@@ -32,7 +32,7 @@ foreach ($settings as $id => $setting) {
 	]);
 }
 
-echo $this->Form->button(__('Submit'));
+echo $this->Form->button(__d('LightStrap', 'Submit'));
 
 echo $this->Form->end();
 			?>

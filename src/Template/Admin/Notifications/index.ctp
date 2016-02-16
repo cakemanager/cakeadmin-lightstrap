@@ -19,7 +19,7 @@ echo $this->Html->getCrumbList();*/
 ?>
 
 <h3>
-	<?= __("Notifications") ?>
+	<?= __d('LightStrap', 'Notifications') ?>
 
 </h3>
 <div class="timeline">

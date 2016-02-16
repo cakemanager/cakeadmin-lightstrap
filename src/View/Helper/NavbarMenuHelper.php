@@ -106,7 +106,7 @@ class NavBarMenuHelper extends Helper implements MenuBuilderInterface
         $html = '<li role="presentation" class="';
         $html .= (key_exists('active', $item) && $item['active'] ? 'active' : '');
         $html .= '">';
-        $html .= $this->Html->link(__($item['title']), $item['url']);
+        $html .= $this->Html->link($item['title'], $item['url']);
         $html .= (key_exists('active', $item) ? '</b>' : '');
         $html .= '</li>';
         return $html;

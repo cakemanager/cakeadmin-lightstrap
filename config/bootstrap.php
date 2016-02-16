@@ -25,7 +25,7 @@ Configure::write('CA.theme', 'LightStrap');
 
 Setting::register('LS.subtheme', 'Cosmo', [
     'options' => [
-        null => 'None',
+        null => __d('LightStrap', 'None'),
         'Cerulean' => 'Cerulean',
         'Cosmo' => 'Cosmo',
         'Cyborg' => 'Cyborg',
@@ -50,8 +50,8 @@ Configure::write('CA.LightStrap.subtheme', Setting::read('LS.subtheme'));
 
 Setting::register('LS.navbar', 'navbar-default', [
     'options' => [
-        'navbar-default' => 'Default',
-        'navbar-inverse' => 'Inverse',
+        'navbar-default' => __d('LightStrap', 'Default'),
+        'navbar-inverse' => __d('LightStrap', 'Inverse'),
     ],
     'type' => 'select'
 ]);
@@ -59,8 +59,8 @@ Configure::write('CA.LightStrap.navbar', Setting::read('LS.navbar'));
 
 Setting::register('LS.container', 'container', [
     'options' => [
-        'container' => 'Fixed',
-        'container-fluid' => 'Fluid',
+        'container' => __d('LightStrap', 'Fixed'),
+        'container-fluid' => __d('LightStrap', 'Fluid'),
     ],
     'type' => 'select'
 ]);

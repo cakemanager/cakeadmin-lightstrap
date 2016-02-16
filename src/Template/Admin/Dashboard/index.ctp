@@ -12,7 +12,7 @@
  * @since         1.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-$this->set('title', 'Dashboard');
+$this->set('title', __d('LightStrap','Dashboard'));
 ?>
 <div class="row">
 	<div class="col-md-12">

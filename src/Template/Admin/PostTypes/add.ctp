@@ -15,14 +15,14 @@
 use Cake\Utility\Hash;
 use Cake\Utility\Inflector;
 
-$this->Html->addCrumb('Dashboard', ['action' => 'index', 'controller' => 'dashboard']);
+$this->Html->addCrumb(__d('LightStrap', 'Dashboard'), ['action' => 'index', 'controller' => 'dashboard']);
 $this->Html->addCrumb($type['alias'], ['action' => 'index', 'type' => $type['slug']]);
-$this->Html->addCrumb('New ' . Inflector::singularize($type['alias']), '');
+$this->Html->addCrumb(__d('LightStrap', 'New {0}', $type['singularAlias']), '');
 echo $this->Html->getCrumbList();
 ?>
 <?= $this->Form->create($entity, $type['formFields']['_create']); ?>
 <fieldset>
-    <legend><?= __('Add ' . Inflector::singularize($type['alias'])) ?></legend>
+    <legend><?= __d('LightStrap', 'Add {0}', $type['singularAlias']) ?></legend>
     <?php
     foreach ($type['formFields'] as $field => $options) {
         if (substr($field, 0, 1) !== '_') {
@@ -33,5 +33,5 @@ echo $this->Html->getCrumbList();
     }
     ?>
 </fieldset>
-<?= $this->Form->button(__('Submit')) ?>
+<?= $this->Form->button(__d('LightStrap', 'Submit')) ?>
 <?= $this->Form->end() ?>

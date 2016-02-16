@@ -32,7 +32,7 @@ $this->layout = 'ajax';
 </div>
 <div class="modal-footer ">
 	<?= $this->Html->link('Cancel', ['action' => 'forgot'], ['data-dismiss' => 'modal', 'class' => 'btn btn-default']); ?>
-	<?= $this->Form->button(__('Request'), ['class' => 'btn btn-primary']); ?>
+	<?= $this->Form->button(__d('LightStrap', 'Request'), ['class' => 'btn btn-primary']); ?>
 </div>
 <?= $this->Form->end() ?>
 

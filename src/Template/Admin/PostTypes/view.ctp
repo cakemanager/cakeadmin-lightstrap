@@ -15,9 +15,9 @@
 use Cake\Utility\Hash;
 use Cake\Utility\Inflector;
 
-$this->Html->addCrumb('Dashboard', ['action' => 'index', 'controller' => 'dashboard']);
+$this->Html->addCrumb(__d('LightStrap', 'Dashboard'), ['action' => 'index', 'controller' => 'dashboard']);
 $this->Html->addCrumb($type['alias'], ['action' => 'index', 'type' => $type['slug']]);
-$this->Html->addCrumb('View ' . Inflector::singularize($type['alias']), '');
+$this->Html->addCrumb(__d('LightStrap', 'View {0}' . Inflector::singularize($type['alias'])), '');
 echo $this->Html->getCrumbList();
 ?>
 <div class="panel panel-primary">
@@ -26,7 +26,7 @@ echo $this->Html->getCrumbList();
 	</div>
 	<div class="panel-body">
 		<div class="row">
-			<div class=" col-md-12"> 
+			<div class=" col-md-12">
 				<table class="table table-view">
 					<tbody>
 						<?php foreach ($type['formFields'] as $field => $options) { ?>

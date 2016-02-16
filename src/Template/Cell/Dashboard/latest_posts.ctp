@@ -25,5 +25,5 @@ endforeach;
 echo $this->element('Dashboard/panel', [
 	'title' => 'Latest Posts',
 	'list' => $list,
-	'footer' => __('Read more at {0}', $this->Html->link('http://cakemanager.org','http://cakemanager.org', ['target' => '_blank'])). ' | '. $this->Html->link('Follow @CakeManager','https://twitter.com/CakeManager', ['target' => '_blank', 'class' => 'twitter-follow-button', 'data-show-count' => 'false'])
+	'footer' => __d('LightStrap', 'Read more at {0}', $this->Html->link('http://cakemanager.org','http://cakemanager.org', ['target' => '_blank'])). ' | '. $this->Html->link('Follow @CakeManager','https://twitter.com/CakeManager', ['target' => '_blank', 'class' => 'twitter-follow-button', 'data-show-count' => 'false'])
 ]);
