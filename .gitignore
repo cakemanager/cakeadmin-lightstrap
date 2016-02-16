@@ -9,3 +9,5 @@
 !/webroot/vendor/font-awesome/**/*
 vendor/
 composer.lock
+
+*.mo
