@@ -39,6 +39,7 @@ Setting::register('LS.subtheme', 'Cosmo', [
         'Slate' => 'Slate',
         'Spacelab' => 'Spacelab',
         'Superhero' => 'Superhero',
+        'Umi' => 'Umi',
         'United' => 'United',
         'Yeti' => 'Yeti',
     ],
