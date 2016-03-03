@@ -66,7 +66,7 @@ msgstr "削除"
 
 #: Template/Admin/PostTypes/index.ctp:62
 msgid "Are you sure you want to delete # {0}?"
-msgstr "ID {0] のデータを削除します。よろしいですか？"
+msgstr "ID {0} のデータを削除します。よろしいですか？"
 
 #: Template/Admin/PostTypes/index.ctp:71
 msgid "previous"
