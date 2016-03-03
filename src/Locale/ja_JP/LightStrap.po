@@ -1,0 +1,102 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-02-16 01:12+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Template/Admin/Dashboard/index.ctp:15
+#: Template/Admin/PostTypes/add.ctp:18
+#: Template/Admin/PostTypes/edit.ctp:18
+#: Template/Admin/PostTypes/index.ctp:18
+#: Template/Admin/PostTypes/view.ctp:18
+#: Template/Admin/Settings/index.ctp:3
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: Template/Admin/Notifications/index.ctp:22
+msgid "Notifications"
+msgstr "通知"
+
+#: Template/Admin/PostTypes/add.ctp:20
+#: Template/Admin/PostTypes/index.ctp:28
+msgid "New {0}"
+msgstr "{0} 新規追加"
+
+#: Template/Admin/PostTypes/add.ctp:25
+msgid "Add {0}"
+msgstr "{0} 追加"
+
+#: Template/Admin/PostTypes/add.ctp:36
+#: Template/Admin/PostTypes/edit.ctp:36
+#: Template/Admin/Settings/index.ctp:35
+msgid "Submit"
+msgstr "送信"
+
+#: Template/Admin/PostTypes/edit.ctp:20;25
+#: Template/Admin/PostTypes/index.ctp:61
+msgid "Edit {0}"
+msgstr "{0} 編集"
+
+#: Template/Admin/PostTypes/index.ctp:26
+msgid "Filter {0}"
+msgstr "{0} 絞り込み"
+
+#: Template/Admin/PostTypes/index.ctp:46
+msgid "Actions"
+msgstr "操作"
+
+#: Template/Admin/PostTypes/index.ctp:60
+#: Template/Admin/PostTypes/view.ctp:20
+msgid "View {0}"
+msgstr "詳細表示"
+
+#: Template/Admin/PostTypes/index.ctp:62
+msgid "Delete {0}"
+msgstr "削除"
+
+#: Template/Admin/PostTypes/index.ctp:62
+msgid "Are you sure you want to delete # {0}?"
+msgstr "ID {0} のデータを削除します。よろしいですか？"
+
+#: Template/Admin/PostTypes/index.ctp:71
+msgid "previous"
+msgstr "前へ"
+
+#: Template/Admin/PostTypes/index.ctp:73
+msgid "next"
+msgstr "次へ"
+
+#: Template/Admin/Settings/index.ctp:4
+msgid "Settings"
+msgstr "設定"
+
+#: Template/Admin/Users/forgot.ctp:35
+msgid "Request"
+msgstr "送信"
+
+#: Template/Admin/Users/login.ctp:38
+msgid "Login"
+msgstr "ログイン"
+
+#: Template/Admin/Users/reset.ctp:20
+msgid "New Password"
+msgstr "新しいパスワード"
+
+#: Template/Admin/Users/reset.ctp:24
+msgid "Save"
+msgstr "保存"
+
+#: Template/Cell/Dashboard/latest_posts.ctp:28
+msgid "Read more at {0}"
+msgstr "あと{0}件"
+

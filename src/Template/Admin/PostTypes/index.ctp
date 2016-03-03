@@ -41,7 +41,7 @@ echo $this->Html->getCrumbList();
 		<tr>
 
 			<?php foreach ($type['tableColumns'] as $column => $options) : ?>
-			<th><?= $this->Paginator->sort($column) ?></th>
+			<th><?= $this->Paginator->sort($column, Hash::get($options, 'slug')) ?></th>
 			<?php endforeach; ?>
 			<th class="actions"><?= __d('LightStrap', 'Actions') ?></th>
 		</tr>
