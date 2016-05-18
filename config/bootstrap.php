@@ -20,7 +20,7 @@ Plugin::load('Bootstrap');
 
 Configure::write('Settings.Prefixes.LS', 'LightStrap');
 
-Configure::write('CA.viewClass', 'LightStrap.App');
+Configure::write('CA.viewClass', 'LightStrap.LightStrap');
 Configure::write('CA.theme', 'LightStrap');
 
 Setting::register('LS.subtheme', 'Cosmo', [

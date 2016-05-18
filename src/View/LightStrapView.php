@@ -19,7 +19,7 @@ use Cake\View\View;
 /**
  * App View class
  */
-class AppView extends View
+class LightStrapView extends View
 {
 
     /**
